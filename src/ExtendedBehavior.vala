@@ -39,6 +39,8 @@ public interface PantheonWayland.ExtendedBehavior : Gtk.Widget, Gtk.Native {
             if (wl_display.roundtrip () < 0) {
                 return;
             }
+        } else {
+            debug ("Not running under wayland, not initializing pantheon shell connection.");
         }
     }
 
@@ -50,6 +52,8 @@ public interface PantheonWayland.ExtendedBehavior : Gtk.Widget, Gtk.Native {
         unowned PantheonDesktop.ExtendedBehavior? extended_behavior = get_data ("-pantheon-wayland-extended-behavior");
         if (extended_behavior != null) {
             extended_behavior.set_keep_above ();
+        } else {
+            warning ("Couldn't set above: ExtendedBehavior surface was null. Did you forget to call connect_to_shell?");
         }
     }
 
@@ -63,6 +67,8 @@ public interface PantheonWayland.ExtendedBehavior : Gtk.Widget, Gtk.Native {
         unowned PantheonDesktop.ExtendedBehavior? extended_behavior = get_data ("-pantheon-wayland-extended-behavior");
         if (extended_behavior != null) {
             extended_behavior.make_centered ();
+        } else {
+            warning ("Couldn't make centered: ExtendedBehavior surface was null. Did you forget to call connect_to_shell?");
         }
     }
 
@@ -74,6 +80,8 @@ public interface PantheonWayland.ExtendedBehavior : Gtk.Widget, Gtk.Native {
         unowned PantheonDesktop.ExtendedBehavior? extended_behavior = get_data ("-pantheon-wayland-extended-behavior");
         if (extended_behavior != null) {
             extended_behavior.focus ();
+        } else {
+            warning ("Couldn't focus: ExtendedBehavior surface was null. Did you forget to call connect_to_shell?");
         }
     }
 }
