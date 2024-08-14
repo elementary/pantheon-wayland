@@ -1,5 +1,5 @@
 # Pantheon Wayland
-Pantheon Wayland is an utility library made for exclusively for the Pantheon
+Pantheon Wayland is an utility library made exclusively for the Pantheon
 Desktop utilities.
 
 ## Building and Installation
