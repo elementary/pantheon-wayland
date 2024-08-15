@@ -1,0 +1,32 @@
+Source: pantheon-wayland
+Section: libs
+Priority: optional
+Maintainer: Danielle Foré <danielle@elementary.io>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.6.2
+Vcs-Git: https://github.com/elementary/pantheon-wayland.git
+Vcs-Browser: https://github.com/elementary/pantheon-wayland
+Homepage: https://github.com/elementary/pantheon-wayland
+
+Package: libpantheon-wayland
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: Pantheon shell utilities for Wayland
+ A collection of utilities for Pantheon shell specific
+ features such as sticky and centered windows
+
+Package: libpantheon-wayland-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libpantheon-wayland (= ${binary:Version}),
+ ${misc:Depends},
+Description: Pantheon shell utilities for Wayland
+ A collection of utilities for Pantheon shell specific
+ features such as sticky and centered windows
