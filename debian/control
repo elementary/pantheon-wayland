@@ -5,6 +5,11 @@ Maintainer: elementary, Inc. <builds@elementary.io>
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
+ gobject-introspection,
+ libgirepository1.0-dev,
+ libgtk-4-dev (>= 4.4),
+ meson,
+ valac
 Standards-Version: 4.6.2
 Vcs-Git: https://github.com/elementary/pantheon-wayland.git
 Vcs-Browser: https://github.com/elementary/pantheon-wayland
@@ -26,6 +31,7 @@ Architecture: any
 Multi-Arch: same
 Depends:
  libpantheon-wayland-1 (= ${binary:Version}),
+ libgtk-4-dev (>= 4.4),
  ${misc:Depends},
 Description: Pantheon shell utilities for Wayland
  A collection of utilities for Pantheon shell specific
