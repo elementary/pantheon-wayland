@@ -1,7 +1,7 @@
-Source: pantheon-wayland
+Source: pantheon-wayland-1
 Section: libs
 Priority: optional
-Maintainer: Danielle Foré <danielle@elementary.io>
+Maintainer: elementary, Inc. <builds@elementary.io>
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
@@ -10,7 +10,7 @@ Vcs-Git: https://github.com/elementary/pantheon-wayland.git
 Vcs-Browser: https://github.com/elementary/pantheon-wayland
 Homepage: https://github.com/elementary/pantheon-wayland
 
-Package: libpantheon-wayland
+Package: libpantheon-wayland-1
 Architecture: any
 Multi-Arch: same
 Depends:
@@ -20,13 +20,25 @@ Description: Pantheon shell utilities for Wayland
  A collection of utilities for Pantheon shell specific
  features such as sticky and centered windows
 
-Package: libpantheon-wayland-dev
+Package: libpantheon-wayland-1-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- libpantheon-wayland (= ${binary:Version}),
+ libpantheon-wayland-1 (= ${binary:Version}),
  ${misc:Depends},
 Description: Pantheon shell utilities for Wayland
  A collection of utilities for Pantheon shell specific
  features such as sticky and centered windows
+
+Package: gir1.2-pantheon-wayland-1.0
+Section: introspection
+Architecture: any
+Multi-Arch: foreign
+Depends: ${gir:Depends}, ${misc:Depends}
+Description: Pantheon shell utilities for Wayland (introspection files)
+ A collection of utilities for Pantheon shell specific
+ features such as sticky and centered windows
+ .
+ This package can be used by other packages using the GIRepository format to
+ generate dynamic bindings.

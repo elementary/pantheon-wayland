@@ -1,2 +1,9 @@
 *~
-build
+build/
+.debhelper/
+debhelper-build-stamp
+debian/files
+debian/gir1.2*/
+debian/*.substvars
+libpantheon-wayland-*/
+tmp/
