@@ -84,4 +84,22 @@ public interface PantheonWayland.ExtendedBehavior : Gtk.Widget, Gtk.Native {
             warning ("Couldn't focus: ExtendedBehavior surface was null. Did you forget to call connect_to_shell?");
         }
     }
+
+    /**
+     * Tells the wm to make this surface a monitor label. This will cause the surface to be
+     * positioned in the top left corner of the given monitor. The surface will also be kept
+     * above other surfaces.
+     * Should only be called after {@link connect_to_shell}.
+     *
+     * @param monitor_index the index of the monitor this surface will label
+     */
+    public void make_monitor_label (int monitor_index) {
+        unowned PantheonDesktop.ExtendedBehavior? extended_behavior = get_data ("-pantheon-wayland-extended-behavior");
+        if (extended_behavior == null) {
+            warning ("Couldn't make monitor label: ExtendedBehavior surface was null. Did you forget to call connect_to_shell?");
+            return;
+        }
+
+        extended_behavior.make_monitor_label (monitor_index);
+    }
 }
