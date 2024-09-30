@@ -69,6 +69,7 @@ namespace PantheonDesktop {
         public void destroy ();
         public void set_keep_above ();
         public void make_centered ();
+        public void make_monitor_label (int monitor_index);
         public void focus ();
     }
 }
