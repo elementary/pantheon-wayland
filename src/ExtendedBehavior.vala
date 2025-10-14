@@ -84,4 +84,21 @@ public interface PantheonWayland.ExtendedBehavior : Gtk.Widget, Gtk.Native {
             warning ("Couldn't focus: ExtendedBehavior surface was null. Did you forget to call connect_to_shell?");
         }
     }
+
+    /**
+     * Tells the wm to make this window modal. The window will be displayed above
+     * all other windows. All user input outside this window and most system shortcuts
+     * will be blocked until this window is closed.
+     * If dim is true the background will be dimmed.
+     * This should only be called after {@link connect_to_shell}.
+     * This is only allowed for centered windows, so {@link make_centered} has to be called first.
+     */
+    public void make_modal (bool dim) {
+        unowned PantheonDesktop.ExtendedBehavior? extended_behavior = get_data ("-pantheon-wayland-extended-behavior");
+        if (extended_behavior != null) {
+            extended_behavior.make_modal ((uint) dim);
+        } else {
+            warning ("Couldn't make modal: ExtendedBehavior surface was null. Did you forget to call connect_to_shell?");
+        }
+    }
 }

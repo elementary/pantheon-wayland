@@ -70,5 +70,6 @@ namespace PantheonDesktop {
         public void set_keep_above ();
         public void make_centered ();
         public void focus ();
+        public void make_modal (uint dim);
     }
 }
