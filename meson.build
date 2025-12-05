@@ -1,4 +1,4 @@
-project('pantheon-wayland', ['c', 'vala'], version: '1.0.0')
+project('pantheon-wayland', ['c', 'vala'], version: '1.1.0')
 
 pkgconfig = import('pkgconfig')
 gnome = import('gnome')
