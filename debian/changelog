@@ -1,3 +1,9 @@
+pantheon-wayland-1 (1.1.0) noble; urgency=medium
+
+  * Release 1.1.0
+
+ -- Danielle Foré <danielle@elementary.io>  Fri, 05 Dec 2025 08:54:22 -0800
+
 pantheon-wayland-1 (1.0.0) noble; urgency=medium
 
   * Initial release.
