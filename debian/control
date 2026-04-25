@@ -1,7 +1,7 @@
 Source: pantheon-wayland-1
 Section: libs
 Priority: optional
-Maintainer: elementary, Inc. <builds@elementary.io>
+Maintainer: elementary <builds@elementary.io>
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
